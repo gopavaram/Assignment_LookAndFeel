@@ -1,47 +1,541 @@
-/**
-Sample css code
-*/
-/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+/* Default background image */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e5f5e5; /* Default background color */
+}
+
+body {
+    background-image: url("../img/Health.jpg");
+}
+
+    /* Background image for the index page */
+    body#index {
+        background-image: url("../img/Health.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Background image for the about page */
+    body#about {
+        background-image: url("../img/Health.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+/* Navigation styles */
+nav {
+    background-color: #444;
+    padding: 10px 0;
+}
+
+#navigation a.active {
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #ADD8E6; /* Pale blue color */
+    color: #fff; /* Text color */
+}
+
+    #navigation a.active::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% + 10px);
+        height: calc(100% + 6px);
+        background-color: #ADD8E6; /* Pale blue color */
+        border-radius: 24px;
+        border: 2px solid #ADD8E6; /* Pale blue color */
+        z-index: -1;
+    }
+
+
+
+
+#navigation {
+    list-style-type: none;
+    text-align: center;
+}
+
+    #navigation li {
+        display: inline;
+    }
+
+        #navigation li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            #navigation li a:hover {
+                background-color: #555;
+            }
+
+
+/* Add styles for the login button */
+.login-button {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    .login-button:hover {
+        background-color: #0056b3;
+    }
+
+/* Login page styles */
+#login {
+    background-color: #cdeccd; /* Pale green color */
+    background-image: url("path/to/login-background.jpg"); /* Add background image if needed */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* Other styles for login page */
+.login-container {
+    text-align: center;
+}
+
+.login-heading {
+    color: #fff; /* Text color for the heading */
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Set a fixed width for the form */
+    margin-top: 20px; /* Add space between the heading and the form */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+/* Global font color (white) */
 body,
-html {
-  height: 100%;
+header,
+nav,
+#navigation a,
+main,
+footer {
+    color: #cdeccd;
 }
 
-/*Set background image*/
-.container {
-  background-image: url('https://doc-10-ao-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/r085o9ungppbiokopob2sfbekae4uqbb/1537920000000/14802840322886517493/*/110cT8sl-pOiHGgj9yToPkAqAzrr-RNfb');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
+    /* For the active navigation link */
+    #navigation a.active {
+        color: #cdeccd;
+    }
+
+/* Add to your main.css */
+
+/* Make all labels bold and text color black */
+label {
+    font-weight: bold; /* This will make the text of all <label> elements bold */
+    display: block; /* This makes the label take up its own line for better spacing */
+    margin-bottom: 5px; /* Adds a little space below each label */
+    color: black; /* Sets the text color to black */
 }
 
-/* Position text in the middle */
-.middle {
-  position: absolute;
-  color: beige;
-  top: 70%;
-  left: 39%;
-  text-align: center;
-  font-size: 25px;
+/* Style the input fields */
+input[type="text"],
+input[type="submit"] {
+    width: 200px; /* Smaller width for the input boxes */
+    padding: 10px;
+    margin-bottom: 10px; /* Adds space below each input field */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black; /* Sets the text color to black */
 }
 
-/*Set circle in unordered list*/
-.middle ul {
-  list-style-type: circle;
+/* Style the submit button */
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
 }
 
-/*Set text inside li tag to left*/
-.middle ul li {
-  text-align: left !important;
+/* Style the form */
+form {
+    max-width: 400px; /* Limit the form's width */
+    margin: 20px auto; /* Center the form in the middle of the page with margin */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
+    color: black; /* Sets the text color to black */
 }
 
-/*Set text color for a tag inside middle class and ul>li element*/
-.middle ul li a {
-  color: beige;
+/* Add some styling to your footer to make it stand out */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
 }
 
-/*Change text color and decoration for a tags inside middle class and ul>li element*/
-.middle ul li a:hover {
-  color: red;
-  text-decoration: none;
+    footer h4 {
+        font-size: 1.2rem;
+        color: black; /* Sets the text color to black, but will be overridden by footer color */
+    }
+
+/* Style for the navigation item corresponding to the current page */
+body#index #navigation a.index,
+body#bmi #navigation a.bmi,
+body#fitness #navigation a.fit,
+body#nutrition #navigation a.nutrition,
+body#about #navigation a.about {
+    background-color: #98fb98; /* Pale green color */
+    color: #333; /* Darker color for text for better visibility */
+    border-radius: 5px; /* If you want rounded corners */
+    /* Rest of your styling for active nav item */
+}
+
+
+/* Add these styles to your main.css */
+
+/* BMI page styles */
+body#bmi {
+    background-image: url("../img/Health.jpg"); /* Update with the correct path to your BMI background */
+    background-size: cover;
+    background-position: center;
+}
+
+    /* BMI form specific styles */
+    body#bmi .login-form {
+        background-color: rgba(255, 255, 255, 0.9); /* Make form background slightly more opaque */
+        width: auto; /* Allow form width to be responsive */
+        max-width: 400px; /* Maximum width of the form */
+        margin: 2rem auto; /* More vertical space, centered horizontally */
+        padding: 2rem; /* Increase padding for better spacing */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for emphasis */
+    }
+
+    /* Update input styles for BMI form */
+    body#bmi input[type="text"],
+    body#bmi input[type="number"], /* Add input type number for BMI inputs */
+    body#bmi input[type="submit"] {
+        width: calc(100% - 20px); /* Full width minus padding */
+        padding: 10px; /* Padding for input fields */
+        margin: 10px 0; /* Spacing between fields */
+    }
+
+/* Modify active navigation link styles for clarity and consistency */
+#navigation a.active {
+    background-color: #98fb98; /* Green color for the active link */
+    color: #FFFFFF; /* White text for better readability */
+    border-radius: 5px;
+    /* Remove the ::after pseudo-element styles if not needed */
+}
+
+#resultsBox {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 15px; /* Padding inside the box */
+    margin-top: 15px; /* Space between the button and the box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+    #resultsBox p {
+        margin: 10px 0; /* Spacing between paragraphs */
+        color: #333; /* Dark grey color for text */
+    }
+
+
+/* Styles for the Fitness Diets page */
+body#fitness {
+    background-image: url("../img/Health.jpg"); /* Example background image */
+    background-size: cover;
+    background-position: center;
+}
+
+#fitness-diets {
+    padding: 40px; /* Spacing around the content */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    text-align: left;
+}
+
+.diet {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 5px;
+    margin-bottom: 20px; /* Spacing between diet sections */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+    .diet h3 {
+        font-size: 1.5rem; /* Slightly larger heading for each diet */
+        color: #333; /* Darker text color for contrast */
+    }
+
+    .diet p {
+        font-size: 1rem; /* Standard text size for descriptions */
+        color: #555; /* Slightly lighter text color for readability */
+    }
+
+/* Background images for each diet section */
+.diet {
+    padding: 20px;
+    border-radius: 10px; /* Soft corners */
+    margin-bottom: 20px; /* Spacing between diet sections */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #333; /* Default text color */
+}
+
+    /* Fat Burner diet background image */
+    .diet.fat-burner {
+        background-image: url("../img/fatburn.jpg"); /* Replace with the correct path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; /* Avoid repetition if the image is smaller than the div */
+    }
+
+    /* Get Fitter diet background image */
+    .diet.get-fitter {
+        background-image: url("../img/fitfood.jpg"); /* Replace with the correct path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Stress Buster diet background image */
+    .diet.stress-buster {
+        background-image: url("../img/stress-buster.jpg"); /* Replace with the correct path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+/* Styles for the popup/modal box */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: white; /* White background for the popup */
+    padding: 20px; /* Padding inside the popup */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    z-index: 1000; /* High z-index to appear above other elements */
+}
+
+    .popup.visible {
+        display: block; /* Show the popup when it's visible */
+    }
+
+/* Overlay to darken the background when the popup is visible */
+.overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Below the popup but above other elements */
+}
+
+    .overlay.visible {
+        display: block; /* Show the overlay when it's visible */
+    }
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+    .overlay.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+    .popup.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.popup {
+    color: #000; /* Explicitly set text color to black */
+    /* Additional styling */
+}
+
+.diet {
+    color: #fff; /* Set text color to white */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+    /* Optional: Apply color property to individual elements if needed */
+    .diet h3 {
+        color: #fff; /* Ensure headings are white */
+    }
+
+    .diet p {
+        color: #fff; /* Ensure paragraphs are white */
+    }
+
+/* Styles specific to the About Us page */
+body#about {
+    background-image: url("../img/about-background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.about-container {
+    color: black;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 1000px; /* Adjusted for wider boxes */
+    margin: 0 auto;
+}
+
+.about-header {
+    color: black; /* Make the "Meet Our Team" heading black */
+    font-size: 2rem; /* Adjust font size as needed */
+    font-weight: bold; /* Optional, for emphasis */
+}
+
+.about-subheader {
+    color: black; /* Make the "Get to know the talented people behind NutriNest." subheader black */
+    font-size: 1.2rem; /* Adjust font size as needed */
+}
+
+.team-intro {
+    color: black; /* Ensures team intro text is black */
+    font-size: 1.1rem;
+}
+
+.team-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    flex: 1;
+    min-width: 250px; /* Wider boxes */
+    max-width: 300px; /* Wider boxes */
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+    .team-member img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .team-member h3 {
+        color: black; /* Ensure text within team-member is black */
+        margin: 10px 0;
+    }
+
+    .team-member p {
+        color: black; /* Ensure description text within team-member is black */
+        font-size: 1rem;
+    }
+
+/* Background image for the About page */
+body#about {
+    background-image: url('../img/Health.jpg'); /* Adjust the path to your image */
+    background-size: cover; /* Ensures the image covers the whole background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repetition of the image */
 }
